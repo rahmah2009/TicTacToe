@@ -57,7 +57,7 @@ const SelectPlayerPage = () => {
                     onClick={()=> setNewgame('cpu')}
                 />
                 </Link>
-                <Link to={`game?versus=player                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        &first=${playerOneMark}`}>
+                <Link to={`game?versus=player&first=${playerOneMark}`}>
                 <ButtonComp text='NEW GAME (VS PLAYER)'
                     bg='#31C3BD'
                     shadow='0px 5px rgba(49, 195, 189, 0.5)'
