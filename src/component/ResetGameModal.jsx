@@ -3,8 +3,8 @@ import React from "react";
 
 const ResetGameModal = ({handleResetGame, handleYesReset}) => {
   return (
-    <div className="fixed w-full">
-      <div className="bg-gray-800 text-center shadow-xl ">
+    <div className="w-screen h-screen fixed top-0 right-0 flex items-center justify-center bg-black/50">
+      <div className="w-full bg-gray-800 text-center shadow-xl ">
         <p className="text-2xl text-white font-bold py-6">Reset Game?</p>
 
         <div className="flex items-center justify-center text-4xl font-bold gap-2">

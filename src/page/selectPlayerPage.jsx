@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-import CrossIcon from '../assets/CombinedshapeCopy.png'
-import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
-import CircleIcon from '../assets/Oval Copy.png'
-import CircleIconGrey from '../assets/Oval Copy-grey.png'
 import ButtonComp from '../component/ButtonComp'
 import { Link } from 'react-router-dom'
 
@@ -15,8 +11,8 @@ const SelectPlayerPage = () => {
     return (
         <main className='w-full lg:w-[375px] max-w-[375px] h-auto mx-auto flex flex-col items-center justify-center gap-[24px]'>
             <div className='flex items-center justify-center gap-1'>
-                <img src={CrossIcon} alt="" />
-                <img src={CircleIcon} alt="" />
+                <img src='/assets/CombinedShapeCopy.png' alt="" />
+                <img src='/assets/Oval Copy.png' alt="" />
             </div>
             <section className="bg-[#1F3641] rounded-[15px] h-auto flex flex-col items-center gap-2 p-[10px]"
                 style={{
@@ -33,7 +29,7 @@ const SelectPlayerPage = () => {
                      className={`w-[45%] p-[10px] ${
                      playerOneMark == 'x' ? 'bg-[#a8bfc9]' : 'bg-none'}  border-none flex items-center justify-center cursor-pointer hover:bg-[#1F3641} hover:shadow-[0_5px_0_rgba(0,0,0,0.25)] rounded-[10px]`}
                      >
-                        <img src={CrossIconGrey} alt="CrossIconGrey" />
+                        <img src='/assets/Combined Shape Copy-grey.png' alt="CrossIconGrey" />
                     </button>
                     <button 
                      type='button'
@@ -41,7 +37,7 @@ const SelectPlayerPage = () => {
                      className={`w-[45%] p-[10px] ${
                      playerOneMark == 'o' ? 'bg-[#a8bfc9]' : 'bg-none'} border-none flex items-center justify-center cursor-pointer hover:bg-[#1f3641] hover:shadow-[0_5px_0_rgba(0,0,0,0.25)] rounded-[10px]`}
                      >
-                        <img src={CircleIconGrey} alt="CircleIconGrey" />
+                        <img src='/assets/Oval Copy-grey.png' alt="CircleIconGrey" />
                     </button>
                 </div>
                 <h3 className="text-[#a8bfc9] text-base font-semibold">

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import GameBtn from '../component/GameBtn'
-import CrossIcon from '../assets/CombinedshapeCopy.png'
-import CircleIcon from '../assets/Oval Copy.png'
-import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
+// import CrossIcon from '../assets/CombinedshapeCopy.png'
+// import CircleIconGrey from '../assets/Oval Copy-grey.png'
+// import CircleIcon from '../assets/Oval Copy.png'
+// import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
 import { useSearchParams } from 'react-router-dom'
 import { GrPowerReset } from "react-icons/gr"
 import WinPopUp from '../component/WinPopUp'
-// import ResetGameModal from '../component/ResetGameModal'
+import ResetGameModal from '../component/ResetGameModal'
 
 const Game = () => {
   const [currentPlayer, setCurrentPlayer]=useState("")
@@ -16,6 +17,7 @@ const Game = () => {
     const [winners, setWinners] = useState([])
     const [tiles, setTiles] = useState([1,2,3,4,5,6,7,8,9])
     const [ties, setTies] = useState(0)
+    const [playerType, setPlayerType] = useState("")
 
     // const CheckTie =(tiles, winner)=>{
     //   if (tiles.every(item)) =>item !== ''
@@ -95,12 +97,12 @@ if(status==="quit"){
     <main>
       <div className='flex justify-between mb-[20px]'>
         <div className='flex w-[20px] h-[20px] items'>
-        <img src={CrossIcon} alt="" />
-        <img src={CircleIcon} alt="" />
+        <img src='/assets/CombinedshapeCopy.png' alt="" />
+        <img src='/assets/Oval Copy.png' alt="" />
       </div>
       <button className='flex items-center gap-2 text-[#a8bfc9] bg-[#2f3746] shadow-lg p-[3px] h-[25px] rounded-[5px]'>
+        {currentPlayer==="x"?(<img src='/assets/Oval Copy-grey.png' alt="" className='w-[20px] h-[20px]'/>):(<img src='/assets/Oval Copy-grey.png' alt='' className='w-[20px] h-[20px]'/>)}
         {/* <img src={CrossIconGrey} alt="" width={20} height={20} className='w-[20px] h-[20px]'/> */}
-        {currentPlayer}
         <span className='text-[#a8bfc9] text-[1rem] font-bold'>TURN</span>
       </button>
       <button className='bg-[#a8bfc9] text-[#2f3746] font-semibold text-[1.5rem]flex items-center shadow-2xl shadow-[#a8bfc9] p-[8px] h-[25px] 
@@ -194,7 +196,7 @@ if(status==="quit"){
     </div>
     <div className='flex justify-between mt-[20px]'>
       <button className='bg-[#31C3BD] rounded-[10px] p-[3px] w-[100px] h-[50px] shadow-2xl'>
-        <span>X (YOU)</span>
+        <span>X (PLAYER1)</span>
         <h3 className='font-bold'>{winners.filter(winner=>winner==="x").length}</h3>
       </button>
       <button className='bg-[#a8bfc9] rounded-[10px] p-[3px] w-[100px] h-[50px]'>
@@ -202,12 +204,12 @@ if(status==="quit"){
         <h3 className='font-bold'>0</h3>
       </button>
       <button className='bg-[#F2B137] rounded-[10px] p-[3px] w-[100px] h-[50px]'>
-        <span>O (CPU)</span>
+        <span>O (PLAYER2)</span>
         <h3 className='font-bold'>{winners.filter(winner=>winner==="o").length}</h3>
       </button>
     </div>
     {/* <ResetGameModal /> */}
-    {winner&&<WinPopUp
+    {winner && <WinPopUp
       winner={winner}
       cb={handleNextRound}
       />}
