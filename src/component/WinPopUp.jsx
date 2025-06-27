@@ -1,6 +1,6 @@
 import React from 'react'
-import x from '../assets/CombinedShapeCopy.png'
-import o from '../assets/Oval Copy.png'
+// import x from '../assets/CombinedShapeCopy.png'
+// import o from '../assets/Oval Copy.png'
 import { Link } from 'react-router-dom'
 
 
@@ -10,7 +10,7 @@ const WinPopUp = ({winner, cb}) => {
         <div className='bg-[#2f3749] p-[20px] w-[100%] flex flex-col justify-center items-center gap-[10px]'>
         <span className='text-[#a8bfc9] font-bold align-center'><span className='capitalize'>{winner} </span>WON!</span>
         <div className='flex gap-[10px] items-center'>
-            <img src={winner==='x'?o:x} alt="" />
+            <img src={winner==='x'? '/assets/Oval Copy.png' : '/assets/CombinedShapeCopy.png'} alt="" />
             <p className='font-bold text-[#31C3BD]'>TAKES THE ROUND</p>
         </div>
         <div className='flex justify-center items-center gap-[10px] w-full'>

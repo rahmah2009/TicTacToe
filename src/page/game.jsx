@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import GameBtn from '../component/GameBtn'
-import CrossIcon from '../assets/CombinedshapeCopy.png'
-import CircleIconGrey from '../assets/Oval Copy-grey.png'
-import CircleIcon from '../assets/Oval Copy.png'
-import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
+// import CrossIcon from '../assets/CombinedshapeCopy.png'
+// import CircleIconGrey from '../assets/Oval Copy-grey.png'
+// import CircleIcon from '../assets/Oval Copy.png'
+// import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
 import { useSearchParams } from 'react-router-dom'
 import { GrPowerReset } from "react-icons/gr"
 import WinPopUp from '../component/WinPopUp'
@@ -97,11 +97,11 @@ if(status==="quit"){
     <main>
       <div className='flex justify-between mb-[20px]'>
         <div className='flex w-[20px] h-[20px] items'>
-        <img src={CrossIcon} alt="" />
-        <img src={CircleIcon} alt="" />
+        <img src='/assets/CombinedshapeCopy.png' alt="" />
+        <img src='/assets/Oval Copy.png' alt="" />
       </div>
       <button className='flex items-center gap-2 text-[#a8bfc9] bg-[#2f3746] shadow-lg p-[3px] h-[25px] rounded-[5px]'>
-        {currentPlayer==="x"?(<img src={CrossIconGrey} alt="" className='w-[20px] h-[20px]'/>):(<img src={CircleIconGrey} alt='' className='w-[20px] h-[20px]'/>)}
+        {currentPlayer==="x"?(<img src='/assets/Oval Copy-grey.png' alt="" className='w-[20px] h-[20px]'/>):(<img src='/assets/Oval Copy-grey.png' alt='' className='w-[20px] h-[20px]'/>)}
         {/* <img src={CrossIconGrey} alt="" width={20} height={20} className='w-[20px] h-[20px]'/> */}
         <span className='text-[#a8bfc9] text-[1rem] font-bold'>TURN</span>
       </button>
@@ -209,7 +209,7 @@ if(status==="quit"){
       </button>
     </div>
     {/* <ResetGameModal /> */}
-    {winner&&<WinPopUp
+    {winner && <WinPopUp
       winner={winner}
       cb={handleNextRound}
       />}
