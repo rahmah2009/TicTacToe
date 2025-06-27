@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Game from './page/game'
-import SelectPlayerPage from './page/SelectPlayerPage'
+import SelectPlayerPage from './page/selectPlayerPage'
+// import SelectPlayerPage from './page/selectPlayerPage'
 
 
 function App() {
