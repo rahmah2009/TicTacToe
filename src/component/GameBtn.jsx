@@ -1,6 +1,6 @@
 import React from 'react'
-import CrossIcon from '../assets/CombinedshapeCopy.png'
-import CircleIcon from '../assets/Oval Copy.png'
+// import CrossIcon from '../assets/CombinedshapeCopy.png'
+// import CircleIcon from '../assets/Oval Copy.png'
 
 const GameBtn = ({onClick, bg, shadow, disable, xSelection, oSelection, index}) => {
   return (
@@ -13,9 +13,9 @@ const GameBtn = ({onClick, bg, shadow, disable, xSelection, oSelection, index}) 
       boxShadow: shadow,
     }}
     >
-      {xSelection.includes(index)&&<img src={CrossIcon} alt="" />}
+      {xSelection.includes(index)&&<img src='/assets/CombinedshapeCopy.png' alt="" />}
       
-      {oSelection.includes(index)&&<img src={CircleIcon} alt="" />}
+      {oSelection.includes(index)&&<img src='/assets/Oval Copy.png' alt="" />}
  
     </button>
   )
