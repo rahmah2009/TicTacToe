@@ -1,8 +1,4 @@
 import React, { useState } from 'react'
-// import CrossIcon from '../assets/CombinedShapeCopy.png'
-// import CrossIconGrey from '../assets/Combined Shape Copy-grey.png'
-// import CircleIcon from '../assets/Oval Copy.png'
-// import CircleIconGrey from '../assets/Oval Copy-grey.png'
 import ButtonComp from '../component/ButtonComp'
 import { Link } from 'react-router-dom'
 
